@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_historic_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_min"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="@dimen/item_historical_card_radius_min"
+    app:cardElevation="@dimen/margin_min"
+    app:cardBackgroundColor="@color/teal_200">
+
+    <LinearLayout
+        android:id="@+id/relative_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/item_historical_padding_min"
+        android:paddingLeft="@dimen/item_historical_padding_min"
+        android:paddingTop="@dimen/item_historical_padding_min"
+        android:paddingEnd="@dimen/item_historical_padding_min"
+        android:paddingRight="@dimen/item_historical_padding_min">
+
+        <LinearLayout
+            android:layout_width="@dimen/item_historical_layout_width_medium"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lbl_historic_month"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/item_historical_month_default"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lbl_historic_day"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_historical_layout_center_height"
+                android:text="@string/item_historical_day_default"
+                android:textAlignment="center"
+                android:textSize="@dimen/item_historical_text_size_med"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lbl_historic_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/item_historical_year_default"
+                android:textAlignment="center"
+                android:textSize="@dimen/item_historical_text_size_min"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/item_historical_layout_center_width"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/item_historical_layout_padding_med">
+
+            <TextView
+                android:id="@+id/lbl_historic_student"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_historical_layout_text_center"
+                android:text="@string/item_historical_student_default"
+                android:textAlignment="center"
+                android:textSize="@dimen/item_historical_text_size_center_med"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lbl_historic_mode"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_historical_layout_center_height"
+                android:text="@string/item_historical_mode_default"
+                android:textAlignment="center"
+                android:textColor="#37474F" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/item_historical_layout_width_medium"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/item_historical_padding_min">
+
+            <TextView
+                android:id="@+id/lbl_historic_note"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_historical_layout_center_height"
+                android:text="@string/item_historical_note_default"
+                android:textAlignment="center"
+                android:textSize="@dimen/item_historical_text_size_med"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lbl_historic_description"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_historical_layout_center_height"
+                android:text="@string/item_historical_description_default"
+                android:textAlignment="center"
+                android:textColor="#37474F" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

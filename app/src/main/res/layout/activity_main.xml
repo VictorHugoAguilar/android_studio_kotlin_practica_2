@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/heigth_normal"
+        android:layout_marginStart="@dimen/activity_main_margin_start"
+        android:layout_marginTop="@dimen/activity_main_margin_top"
+        android:layout_marginEnd="@dimen/activity_main_margin_end"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rbn_presencial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/presencial" />
+
+        <RadioButton
+            android:id="@+id/rbn_semipresencial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/semipresencial" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/input_nombre"
+        android:layout_width="@dimen/ancho_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_min"
+        android:layout_marginEnd="@dimen/margin_min"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/indroduzca_el_nombre_del_alumno"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/text_hint_color_ligth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lbl_title_date_notes"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/lbl_title_date_notes"
+        android:layout_width="@dimen/textview_name_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_min"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:text="@string/nombre"
+        app:layout_constraintEnd_toStartOf="@+id/input_nombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_title_date"
+        android:layout_width="@dimen/textview_name_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="25dp"
+        android:text="Fecha:"
+        app:layout_constraintEnd_toStartOf="@+id/lbl_date_in"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_nombre" />
+
+    <TextView
+        android:id="@+id/lbl_in_note"
+        android:layout_width="@dimen/textview_name_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_main_margin_medium"
+        android:layout_marginTop="@dimen/activity_main_margin_low"
+        android:text="Notas: "
+        app:layout_constraintEnd_toStartOf="@+id/lbl_note_in"
+        app:layout_constraintStart_toEndOf="@+id/lbl_date_in"
+        app:layout_constraintTop_toBottomOf="@+id/input_nombre" />
+
+    <TextView
+        android:id="@+id/lbl_note_in"
+        android:layout_width="@dimen/text_central_large"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_main_margin_low"
+        android:layout_marginEnd="32dp"
+        android:text=" ?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lbl_in_note"
+        app:layout_constraintTop_toBottomOf="@+id/input_nombre" />
+
+    <TextView
+        android:id="@+id/lbl_date_in"
+        android:layout_width="@dimen/text_central_large"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_main_margin_low"
+        android:layout_marginEnd="@dimen/activity_main_margin_low"
+        android:text=" ?"
+        app:layout_constraintEnd_toStartOf="@+id/lbl_in_note"
+        app:layout_constraintStart_toEndOf="@+id/lbl_title_date"
+        app:layout_constraintTop_toBottomOf="@+id/input_nombre" />
+
+    <Button
+        android:id="@+id/btn_calcular"
+        android:layout_width="395dp"
+        android:layout_height="@dimen/heigth_normal"
+        android:layout_marginStart="@dimen/margin_min"
+        android:layout_marginTop="@dimen/margin_min"
+        android:layout_marginEnd="@dimen/margin_min"
+        android:enabled="false"
+        android:text="@string/calcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_in_date_note" />
+
+    <Button
+        android:id="@+id/btn_in_date_note"
+        android:layout_width="395dp"
+        android:layout_height="@dimen/heigth_normal"
+        android:layout_marginStart="@dimen/margin_min"
+        android:layout_marginTop="@dimen/margin_min"
+        android:layout_marginEnd="@dimen/margin_min"
+        android:text="INTRODUCIR FECHA Y NOTAS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_title_date" />
+
+    <Button
+        android:id="@+id/btn_save_history"
+        android:layout_width="395dp"
+        android:layout_height="@dimen/heigth_normal"
+        android:layout_marginStart="@dimen/margin_min"
+        android:layout_marginEnd="@dimen/margin_min"
+        android:layout_marginBottom="@dimen/margin_min"
+        android:enabled="false"
+        android:text="GUARDAR EN HISTÓRICO"
+        app:layout_constraintBottom_toTopOf="@+id/btn_show_history"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_show_history"
+        android:layout_width="395dp"
+        android:layout_height="@dimen/heigth_normal"
+        android:layout_marginStart="@dimen/margin_min"
+        android:layout_marginEnd="@dimen/margin_min"
+        android:text="VER HISTÓRICO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/grup_fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="input_nombre,lbl_title_date_notes" />
+
+    <FrameLayout
+        android:id="@+id/fl_result_number"
+        android:layout_width="@dimen/ancho_zero"
+        android:layout_height="@dimen/ancho_zero"
+        android:layout_marginStart="@dimen/margin_min"
+        android:layout_marginTop="@dimen/margin_min"
+        android:layout_marginEnd="@dimen/margin_min"
+        android:layout_marginBottom="@dimen/margin_min"
+        android:background="@color/background_dark"
+        app:layout_constraintBottom_toTopOf="@+id/btn_save_history"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_calcular">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/lbl_result"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="104dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="104dp"
+                android:text="0.00"
+                android:textAlignment="center"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_central_large"
+                app:layout_constraintBottom_toTopOf="@+id/lbl_descrip_result"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lbl_descrip_result"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/heigth_normal"
+                android:layout_marginStart="@dimen/margin_min"
+                android:layout_marginEnd="@dimen/margin_min"
+                android:layout_marginBottom="@dimen/margin_min"
+                android:text="Calificación"
+                android:textAlignment="center"
+                android:textColor="@color/text_dark"
+                android:textSize="34sp"
+                app:autoSizeTextType="none"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

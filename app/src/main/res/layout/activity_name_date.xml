@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/lbl_title_date_notes"
+        android:layout_width="@dimen/activity_name_date_textview_width"
+        android:layout_height="@dimen/activity_name_date_textview_height"
+        android:layout_marginStart="@dimen/activity_name_date_textview_margin_start"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="@dimen/activity_name_date_textview_margin_start"
+        android:text="@string/introducci_n_de_la_fecha_y_nota"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_student_name" />
+
+    <TextView
+        android:id="@+id/lbl_student_name"
+        android:layout_width="@dimen/activity_name_date_textview_width"
+        android:layout_height="@dimen/activity_name_date_textview_height"
+        android:layout_marginStart="@dimen/activity_name_date_textview_margin_start"
+        android:layout_marginTop="@dimen/activity_name_date_textview_margin_top"
+        android:layout_marginEnd="@dimen/activity_name_date_textview_margin_start"
+        android:layout_marginBottom="@dimen/activity_name_date_textview_margin_bottom"
+        android:text="@string/activity_name_date_lbl_name"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_title_date_notes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_fecha"
+        android:layout_width="@dimen/textview_date_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_min"
+        android:layout_marginTop="@dimen/activity_name_date_textview_margin_top_med"
+        android:text="@string/fecha"
+        app:layout_constraintEnd_toStartOf="@+id/input_dia_fecha"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_title_date_notes" />
+
+    <EditText
+        android:id="@+id/input_mes_fecha"
+        android:layout_width="@dimen/ancho_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_name_date_textview_margin_top_min"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/mes"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColorHint="@color/text_hint_color_ligth"
+        app:layout_constraintEnd_toStartOf="@+id/input_anio_fecha"
+        app:layout_constraintStart_toEndOf="@+id/input_dia_fecha"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_title_date_notes"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/input_anio_fecha"
+        android:layout_width="@dimen/ancho_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_name_date_textview_margin_top_min"
+        android:layout_marginEnd="@dimen/margin_min"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/a_o"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColorHint="@color/text_hint_color_ligth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/input_mes_fecha"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_title_date_notes"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/input_eval_3"
+        android:layout_width="@dimen/ancho_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_name_date_textview_margin_top_minm"
+        android:layout_marginEnd="@dimen/margin_min"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/lbl_eval_3"
+        app:layout_constraintTop_toBottomOf="@+id/input_anio_fecha"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/input_eval_2"
+        android:layout_width="@dimen/ancho_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_name_date_textview_margin_top_minm"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toStartOf="@+id/lbl_eval_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/lbl_eval_2"
+        app:layout_constraintTop_toBottomOf="@+id/input_mes_fecha"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/lbl_eval_1"
+        android:layout_width="@dimen/anch_eval"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_min"
+        android:layout_marginTop="@dimen/activity_name_date_textview_margin_top_max"
+        android:text="@string/eval1"
+        app:layout_constraintEnd_toStartOf="@+id/input_eval_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_fecha" />
+
+    <EditText
+        android:id="@+id/input_eval_1"
+        android:layout_width="@dimen/ancho_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_name_date_textview_margin_top_minm"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toStartOf="@+id/lbl_eval_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/lbl_eval_1"
+        app:layout_constraintTop_toBottomOf="@+id/input_dia_fecha"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/lbl_eval_2"
+        android:layout_width="@dimen/anch_eval"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/activity_name_date_textview_margin_top_min"
+        android:text="@string/eval2"
+        app:layout_constraintEnd_toStartOf="@+id/input_eval_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/input_eval_1"
+        app:layout_constraintTop_toBottomOf="@+id/input_dia_fecha" />
+
+    <TextView
+        android:id="@+id/lbl_eval_3"
+        android:layout_width="@dimen/anch_eval"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/activity_name_date_textview_margin_top_min"
+        android:text="@string/eval3"
+        app:layout_constraintEnd_toStartOf="@+id/input_eval_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/input_eval_2"
+        app:layout_constraintTop_toBottomOf="@+id/input_mes_fecha" />
+
+    <EditText
+        android:id="@+id/input_dia_fecha"
+        android:layout_width="@dimen/ancho_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_name_date_textview_margin_top_min"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/d_a"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColorHint="@color/text_hint_color_ligth"
+        app:layout_constraintEnd_toStartOf="@+id/input_mes_fecha"
+        app:layout_constraintStart_toEndOf="@+id/lbl_fecha"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_title_date_notes"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btn_aceptar"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="@dimen/margin_min"
+        android:layout_marginTop="@dimen/activity_name_date_textview_margin_top_max"
+        android:layout_marginEnd="@dimen/margin_min"
+        android:text="@string/activity_name_date_btn_aceptar"
+        app:layout_constraintBottom_toTopOf="@+id/btn_cancelar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_eval_2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_cancelar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_min"
+        android:layout_marginEnd="@dimen/margin_min"
+        android:layout_marginBottom="227dp"
+        android:text="@string/activity_name_date_btn_cancelar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_aceptar" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/grup_fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="input_dia_fecha,lbl_fecha,input_mes_fecha,input_anio_fecha" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="lbl_title_date_notes" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

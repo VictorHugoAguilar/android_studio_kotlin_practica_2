@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Notas Programación</string>
+    <string name="presencial">Presencial</string>
+    <string name="semipresencial">Semipresencial</string>
+    <string name="nombre">Nombre</string>
+    <string name="indroduzca_el_nombre_del_alumno">Indroduzca el nombre del alumno</string>
+    <string name="fecha">Fecha:</string>
+    <string name="d_a">Día</string>
+    <string name="mes">Mes</string>
+    <string name="a_o">Año</string>
+    <string name="calcular">Calcular</string>
+    <string name="eval1">Eval1:</string>
+    <string name="eval2">Eval2:</string>
+    <string name="eval3">Eval3:</string>
+
+    <!-- DESCRIPTIONS -->
+    <string name="note_description_insuficient">Insuficiente</string>
+    <string name="note_description_suficient">Suficiente</string>
+    <string name="note_description_good">Bien</string>
+    <string name="note_description_excelent">Sobresaliente</string>
+    <string name="MODE_PRESENCIAL">Presencial</string>
+    <string name="MODE_SEMIPRESENCIAL">Semipresencial</string>
+    <string name="RESULT_CORRECT">Correcto</string>
+    <string name="FIlE_NAME_SAVED">Student.txt</string>
+    <string name="msg_not_found_data_file">No hay datos para mostrar</string>
+    <string name="msn_error_file_not_exists">El fichero no existe</string>
+    <string name="lbl_main_calification">Calificación</string>
+    <string name="lbl_empty_interrogation">" ?"</string>
+    <string name="introducci_n_de_la_fecha_y_nota">Introducción de la Fecha Y Nota</string>
+    <string name="activity_name_date_btn_aceptar">ACEPTAR</string>
+    <string name="activity_name_date_btn_cancelar">CANCELAR</string>
+    <string name="activity_name_date_lbl_name">Name</string>
+    <string name="item_historical_month_default">Diciembre</string>
+    <string name="item_historical_day_default">12</string>
+    <string name="item_historical_year_default">2022</string>
+    <string name="item_historical_student_default">Victor Hugo Aguilar Aguilar</string>
+    <string name="item_historical_mode_default">(Semipresencial)</string>
+    <string name="item_historical_note_default">8</string>
+    <string name="item_historical_description_default">Notable</string>
+
+</resources>
