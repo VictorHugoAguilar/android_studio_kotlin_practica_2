@@ -103,7 +103,8 @@
                 android:layout_height="@dimen/item_historical_layout_center_height"
                 android:text="@string/item_historical_description_default"
                 android:textAlignment="center"
-                android:textColor="#37474F" />
+                android:textColor="#37474F"
+                android:textSize="@dimen/item_historical_text_size_small" />
 
         </LinearLayout>
     </LinearLayout>

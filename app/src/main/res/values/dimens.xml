@@ -46,4 +46,5 @@
     <dimen name="activity_name_date_textview_margin_top_min">26dp</dimen>
     <dimen name="activity_name_date_textview_margin_top_minm">12dp</dimen>
     <dimen name="activity_name_date_textview_margin_top_max">40dp</dimen>
+    <dimen name="item_historical_text_size_small">12sp</dimen>
 </resources>
